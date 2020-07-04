@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome to shorter');
-});
+Route::get('{url}','UrlController@index');
+Route::post('url','UrlController@store')->name("urlstore");
+
+
+Route::get('/',function(){
+    return  view("home");
+})->name('home');
