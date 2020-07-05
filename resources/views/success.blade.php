@@ -1,6 +1,22 @@
 
+@extends('layout.app');
+@section('content')
 
 
-<div class="bg-success"> Your current url {{$url->url}} </div>
-<div class="bg-success"> Your shorten url {{$url->shorten}} </div>
-{{$url}}
+
+
+<div class="alert alert-success">
+  <strong>Success!</strong> Your current url : {{$url->url}} </br>
+
+  Your shorten url  :
+{{$url->shorten}}
+</div>
+
+
+       
+
+
+
+
+
+  @endsection
